@@ -4,39 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#030712">
+    <meta name="theme-color" content="#4f46e5">
     <title>NexusFlow | AI-Powered Project Intelligence & Workflow Automation</title>
     
     <!-- SEO & Indexing -->
-    <meta name="description" content="NexusFlow is the next-generation AI platform for project management. Automate tasks, predict bottlenecks, and scale your team with Gemini-powered intelligence.">
-    <meta name="keywords" content="AI project management, SaaS, workflow automation, team productivity, NexusAI">
+    <meta name="description" content="NexusFlow: The next-generation AI platform for project management. Automate tasks and predict bottlenecks with Gemini-powered intelligence.">
+    <meta name="keywords" content="AI project management, SaaS, workflow automation, team productivity">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="NexusFlow AI">
     <link rel="canonical" href="https://nexusflow-ai-landingpage.vercel.app/" />
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nexusflow-ai-landingpage.vercel.app/">
-    <meta property="og:title" content="NexusFlow | AI-Powered Project Intelligence">
-    <meta property="og:description" content="Automate tasks and predict bottlenecks with Gemini-powered intelligence.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="NexusFlow | AI-Powered Project Intelligence">
-    <meta property="twitter:description" content="The all-in-one AI platform to manage projects and automate workflows.">
-
     <!-- Performance: Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://esm.sh" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://esm.sh">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=60&fm=webp" as="image" fetchpriority="high">
 
     <!-- Critical CSS for FCP (First Contentful Paint) -->
     <style>
-        :root { --bg: #030712; --text: #f9fafb; }
+        :root { --bg: #030712; --text: #f9fafb; --primary: #4f46e5; }
         body {
             margin: 0;
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             font-display: swap;
@@ -44,18 +36,18 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
-        /* Pre-styled container to avoid layout shift */
         #root { min-height: 100vh; }
         .glass-morphism { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        
+        /* Optimization: content-visibility for off-screen sections */
+        #features, #demo, #testimonials, #pricing, #faq { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+        
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
         .animate-float { animation: float 6s ease-in-out infinite; }
-        [v-cloak] { display: none; }
     </style>
 
-    <!-- Defer heavy scripts to allow HTML parsing first -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
     <script type="importmap">
     {
@@ -67,6 +59,7 @@
       }
     }
     </script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body>
