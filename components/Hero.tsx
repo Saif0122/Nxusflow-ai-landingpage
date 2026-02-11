@@ -4,7 +4,7 @@ import React from 'react';
 export const Hero: React.FC = () => {
   return (
     <header className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      {/* Background Orbs - Decorative only */}
+      {/* Background Orbs - Decorative only, hidden from SR */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-20 blur-[120px]" aria-hidden="true">
         <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-600 rounded-full"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600 rounded-full"></div>
@@ -14,10 +14,10 @@ export const Hero: React.FC = () => {
         {/* Clickable Version Badge */}
         <a 
           href="#features" 
-          aria-label="View version 2.0 release features"
+          aria-label="New: Version 2.0 features now live"
           className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-indigo-400 text-xs md:text-sm font-medium mb-8 hover:bg-white/10 hover:border-indigo-500/30 transition-all duration-300 active:scale-95 group"
         >
-          <span className="relative flex h-2 w-2">
+          <span className="relative flex h-2 w-2" aria-hidden="true">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
           </span>
@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
           </svg>
         </a>
 
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-[1.1] text-white">
           Intelligence that <br />
           <span className="gradient-text">Flows with You</span>
         </h1>
@@ -38,13 +38,13 @@ export const Hero: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 px-4">
           <button 
-            aria-label="Start your free trial"
+            aria-label="Get started with a free trial"
             className="w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-lg transition-all shadow-xl shadow-indigo-500/20 hover:-translate-y-1 active:scale-95"
           >
             Start Free Trial
           </button>
           <button 
-            aria-label="Watch product demo"
+            aria-label="View product demo video"
             className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-2xl font-bold text-lg transition-all backdrop-blur-sm active:scale-95"
           >
             View Live Demo
@@ -65,15 +65,15 @@ export const Hero: React.FC = () => {
                 nexusflow.ai/workspace/dashboard
               </div>
             </div>
-            {/* Fix: changed fetchpriority to fetchPriority */}
+            {/* LCP Optimization: fetchPriority, Decoding, and WebP Compression */}
             <img 
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
-              alt="NexusFlow AI Dashboard Visualization" 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80&fm=webp" 
+              alt="NexusFlow AI Project Dashboard Interface" 
               width="1200"
               height="675"
               fetchPriority="high"
               decoding="async"
-              className="w-full h-auto opacity-90 group-hover:scale-[1.02] transition-transform duration-1000 object-cover cursor-pointer"
+              className="w-full h-auto opacity-90 group-hover:scale-[1.02] transition-transform duration-1000 object-cover cursor-pointer bg-gray-900"
             />
           </div>
         </div>
